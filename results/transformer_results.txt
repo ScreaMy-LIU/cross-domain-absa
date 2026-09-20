@@ -1,0 +1,23 @@
+Sentence-level Transformer Baseline
+===================================
+
+Model:
+distilbert-base-uncased-finetuned-sst-2-english
+
+Dataset:
+data/sample_absa.csv
+
+Samples: 14
+
+Accuracy: 64.29%
+
+Comparison:
+Rule-based baseline: 57.14%
+Transformer baseline: 64.29%
+
+Limitations:
+- The model is trained for sentence-level sentiment classification.
+- It is not specifically trained for Aspect-Based Sentiment Analysis.
+- It only supports positive and negative labels.
+- Neutral sentiment is not explicitly modeled.
+- Providing the aspect in the input does not guarantee aspect-aware reasoning.

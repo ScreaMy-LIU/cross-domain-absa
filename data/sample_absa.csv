@@ -7,3 +7,9 @@ text,aspect,label
 "The price is expensive.",price,negative
 "The design is average.",design,neutral
 "The performance is fast.",performance,positive
+"The battery is not good.",battery,negative
+"The screen is not bad.",screen,positive
+"The camera could be better.",camera,negative
+"The price is high, but the quality makes it worth it.",price,negative
+"I expected the keyboard to be great, but it is disappointing.",keyboard,negative
+"The design looks premium although the performance is slow.",design,positive

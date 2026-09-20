@@ -1,0 +1,15 @@
+Rule-based ABSA Baseline
+========================
+
+Dataset: data/sample_absa.csv
+Samples: 14
+
+Correct: 8/14
+Accuracy: 57.14%
+
+Observed limitations:
+- Negation
+- Implicit sentiment
+- Complex expressions
+- Contrastive sentence structures
+- Context-dependent sentiment
