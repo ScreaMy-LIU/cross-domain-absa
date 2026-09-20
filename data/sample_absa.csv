@@ -1,0 +1,9 @@
+text,aspect,label
+"The battery life is great but the screen is expensive.",battery,positive
+"The battery life is great but the screen is expensive.",screen,negative
+"The camera is excellent but the battery is poor.",camera,positive
+"The camera is excellent but the battery is poor.",battery,negative
+"The keyboard is good.",keyboard,positive
+"The price is expensive.",price,negative
+"The design is average.",design,neutral
+"The performance is fast.",performance,positive
