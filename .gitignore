@@ -220,3 +220,5 @@ __marimo__/
 # SemEval datasets
 data/laptop/
 data/restaurant/
+# Trained models and checkpoints
+models/
