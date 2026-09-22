@@ -191,20 +191,52 @@ Raw SemEval dataset files and trained model checkpoints are excluded from the re
 
 ---
 
+## Cross-Domain Evaluation
+
+To evaluate cross-domain generalization, the model trained on the
+**Laptop** domain was directly evaluated on a held-out
+**Restaurant** domain test set without additional Restaurant-domain
+training.
+
+### Results
+
+| Evaluation | Accuracy | Macro F1 |
+|---|---:|---:|
+| Laptop → Laptop (In-Domain) | 73.58% | 0.6465 |
+| Laptop → Restaurant (Cross-Domain) | 69.11% | 0.5217 |
+
+Compared with the in-domain evaluation:
+
+- Accuracy decreased by **4.47 percentage points**
+- Macro F1 decreased by **0.1248**
+
+The larger decrease in Macro F1 indicates that performance degradation
+is not distributed equally across sentiment classes. In particular,
+neutral sentiment becomes substantially more difficult under
+cross-domain transfer.
+
+![In-Domain vs Cross-Domain Performance](figures/domain_comparison.png)
+
+---
+
 ## Next Step
 
-The next experiment will evaluate the current approach under **domain shift**.
+The next stage will investigate **low-resource target-domain adaptation**.
 
-```text
-Train:
-Laptop ABSA
+The goal is to determine whether a small amount of labeled Restaurant
+data can improve the performance of the Laptop-trained model.
 
-        ↓
+Planned experiments:
 
-Test:
-Restaurant ABSA
-```
+- 0% target-domain data (current cross-domain baseline)
+- 1% labeled Restaurant data
+- 5% labeled Restaurant data
+- 10% labeled Restaurant data
 
-The objective is to measure how much performance decreases when the model is transferred to a different domain.
+All adapted models will be evaluated on the same held-out Restaurant
+evaluation set to ensure a consistent comparison.
 
-This will establish the first **cross-domain ABSA baseline** for the project.
+The main research question is:
+
+> How much labeled target-domain data is required to recover performance
+> lost under domain shift?
